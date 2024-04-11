@@ -34,23 +34,21 @@
 			Math.floor((distance % minute) / second)
 		).padStart(2, "0");
 
+		// DO below only if that element exists
 
-		document.getElementById("days").innerText = days;
-		document.getElementById("hours").innerText = hours;
-		document.getElementById("minutes").innerText = minutes;
-		document.getElementById("seconds").innerText = seconds;
-
-		document.getElementById("days1").innerText = days;
-		document.getElementById("hours1").innerText = hours;
-		document.getElementById("minutes1").innerText = minutes;
-		document.getElementById("seconds1").innerText = seconds;
-   
-		if (distance < 0) {
-			document.getElementById("headline").innerText = "It's my birthday!";
-			document.getElementById("countdown").style.display = "none";
-			document.getElementById("content").style.display = "block";
-			clearInterval(x);
+		if (document.getElementById("days")) {
+			document.getElementById("days").innerText = days;
+			document.getElementById("hours").innerText = hours;
+			document.getElementById("minutes").innerText = minutes;
+			document.getElementById("seconds").innerText = seconds;
+		} else {
+			document.getElementById("days1").innerText = days;
+			document.getElementById("hours1").innerText = hours;
+			document.getElementById("minutes1").innerText = minutes;
+			document.getElementById("seconds1").innerText = seconds;
 		}
+
+
 		//seconds
 	}, 0);
 })();
