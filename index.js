@@ -1,4 +1,4 @@
-(() => {
+function main() {
 	const second = 1000;
 	const minute = second * 60;
 	const hour = minute * 60;
@@ -48,7 +48,8 @@
 			document.getElementById("seconds1").innerText = seconds;
 		}
 
-
 		//seconds
 	}, 0);
-})();
+}
+
+main()
