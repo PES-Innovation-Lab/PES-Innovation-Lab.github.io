@@ -33,8 +33,20 @@
 				(document.getElementById("seconds").innerText = Math.floor(
 					(distance % minute) / second
 				));
+			
+			(document.getElementById("days1").innerText = Math.floor(
+				distance / day
+			)),
+				(document.getElementById("hours1").innerText = Math.floor(
+					(distance % day) / hour
+				)),
+				(document.getElementById("minutes1").innerText = Math.floor(
+					(distance % hour) / minute
+				)),
+				(document.getElementById("seconds1").innerText = Math.floor(
+					(distance % minute) / second
+				));
 
-			//do something later when date is reached
 			if (distance < 0) {
 				document.getElementById("headline").innerText =
 					"It's my birthday!";
