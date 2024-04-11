@@ -34,6 +34,7 @@
 			Math.floor((distance % minute) / second)
 		).padStart(2, "0");
 
+
 		document.getElementById("days").innerText = days;
 		document.getElementById("hours").innerText = hours;
 		document.getElementById("minutes").innerText = minutes;
@@ -43,7 +44,7 @@
 		document.getElementById("hours1").innerText = hours;
 		document.getElementById("minutes1").innerText = minutes;
 		document.getElementById("seconds1").innerText = seconds;
-
+   
 		if (distance < 0) {
 			document.getElementById("headline").innerText = "It's my birthday!";
 			document.getElementById("countdown").style.display = "none";
