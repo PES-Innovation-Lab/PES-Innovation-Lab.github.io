@@ -1,1 +1,65 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="index.js"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: "#068F12",
+							secondary: "#F38F03",
+						},
+						screens: {
+							phone: "426px",
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("unifont.otf");
+			}
+			div {
+				font-family: myFirstFont;
+			}
+		</style>
+	</head>
+	<body>
+		<div
+			class="flex h-screen max-h-screen bg-[#001118] flex-col items-center justify-center gap-14 p-6 phone:justify-between phone:gap-0 phone:p-20"
+		>
+			<div
+				class="text-center text-3xl font-extrabold text-primary phone:text-4xl sm:text-5xl md:text-6xl"
+			>
+				PES Innovation Lab
+				<p
+					class="text-2xl text-white opacity-70 sm:text-3xl md:text-4xl"
+				>
+					Presents
+				</p>
+			</div>
+			<div
+				class="phone:text-5xl font-bold text-4xl lg:text-9xl md:text-8xl sm:text-7xl text-secondary mt-12"
+			>
+				The Hunt '24
+			</div>
+			<div class="text-secondary text-center text-3xl">
+                <div>
+                    Check back in 
+                </div>
+				<div id="countdown" class="text-secondary flex text-4xl gap-4">
+					<div><span id="days"></span> days</div>
+					<div><span id="hours"></span> Hours</div>
+					<div><span id="minutes"></span> Minutes</div>
+					<div><span id="seconds"></span> Seconds</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
