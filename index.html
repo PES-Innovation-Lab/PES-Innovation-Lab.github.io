@@ -23,6 +23,9 @@
 			};
 		</script>
 		<style>
+			.my-element {
+				height: 100dvh;
+			}
 			@font-face {
 				font-family: myFirstFont;
 				src: url("unifont.otf");
@@ -34,7 +37,7 @@
 	</head>
 	<body>
 		<div
-			class="flex h-screen max-h-screen bg-[#001118] flex-col items-center justify-start phone:gap-14 p-2 phone:justify-between phone:gap-0 phone:p-20"
+			class="flex my-element phone:h-auto phone:min-h-screen bg-[#001118] flex-col items-center justify-start phone:gap-14 p-2 phone:justify-between phone:gap-0 phone:p-20"
 		>
 			<div
 				class="text-center text-2xl font-extrabold mt-20 phone:mt-0 text-primary phone:text-4xl sm:text-5xl md:text-6xl"
